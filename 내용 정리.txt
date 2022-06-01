@@ -250,3 +250,30 @@ JVM은 OS에서 할당받은 몌모리 영역(Runtime Data Area)을 세 영역�
 	> NullPointerException
 
 ----------------------------------------------
+
+5.5 String 타입
+
+■ String 타입
+  - 문자열을 저장하는 클래스 타입
+  - 문자열 리터럴이 동일하다면 String 객체를 공유한다.
+  - new 연산자를 이용한 객체 생성
+	: 힙 영역에 새로운 String 객체를 생성
+	: String 객체를 생성한 후 번지를 리턴
+  - 문자열 비교
+  	: 비교연산자 == 를 사용하면 객체 비교
+	: equals() 메소드 를 사용하면 문자열 비교
+	ex) String name1 = "신용권";
+	    String name2 = "신용권";
+	    String name3 = new String("신용권");
+
+	name1 == name2 		// true
+	name2 == name3 		// false
+	name2.equals(name3)	// true
+
+■ 참조를 잃은 String 객체는
+  : 쓰레기 수집기(Garbage Collector)를 구동시켜 메모리에서 자동 제거된다.
+	(아래와 같은 경우 위 설명)
+	String hobby = "여행"
+	hoppy = null;
+
+----------------------------------------------
