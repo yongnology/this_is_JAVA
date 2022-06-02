@@ -1,4 +1,4 @@
-package chap05.sec05.exam01_string_equals;
+package sec05.exam01_string_equals;
 // 문자열 비교
 public class StringEqualsExample {
 
